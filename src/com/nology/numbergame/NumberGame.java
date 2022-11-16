@@ -24,7 +24,7 @@ public class NumberGame {
             try {
                 enteredInt = Integer.parseInt(userInput.nextLine());
             } catch (Exception e) {
-                System.out.println("value is not an integer.");
+                System.out.println("It is not an integer. Try again.");
                 continue;
             }
             if(enteredInts.contains(enteredInt)) {
@@ -40,6 +40,7 @@ public class NumberGame {
             if (enteredInt == targetInt) {
                 System.out.println("You won!");
                 stopGame = true;
+                System.out.println("The number was " + targetInt);
                 startGame();
 
             } else if (enteredInt <= targetInt + 3 && enteredInt >= targetInt - 3) {
@@ -58,9 +59,10 @@ public class NumberGame {
                 System.out.println("No where near..");
             }
 
-            if (numAttempts > 50) {
+            if (numAttempts > 10) {
                 System.out.println("You ran out of attempts..");
                 stopGame = true;
+                System.out.println("The number was " + targetInt);
                 startGame();
             }
         }
