@@ -69,7 +69,7 @@ public class NumberGame {
     }
     private static void startGame() {
         char playGame = 'y';
-        System.out.println("Would you like to play the Number Guessing y / n");
+        System.out.println("Would you like to play the Number Guessing y / n?");
         Scanner scan = new Scanner(System.in);
         playGame = scan.next().charAt(0);
 
